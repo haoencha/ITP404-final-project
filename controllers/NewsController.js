@@ -5,4 +5,5 @@ angular
 
     var vm = this;
     vm.news = news;
+  	
   });

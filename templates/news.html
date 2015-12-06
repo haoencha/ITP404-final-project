@@ -7,7 +7,13 @@
 		
 		<h4 style="text-align: center"><strong>"{{news.title}}"</strong></h5><br>
 
-		<a href="{{news.url}}" style="float:left; margin-right:20px" target="_blank"><img src='{{news.multimedia[3].url}}'></a>
+		<a href="{{news.url}}" style="float:left; margin-right:20px" target="_blank">
+	 	<span ng-if="news.multimedia ===''">
+			<img src="http://www.definitivetech.com/images/products/product_image_not_available.gif" height="293px"></span>
+		<span ng-if="news.multimedia !==''">		
+			<img src='{{news.multimedia[3].url}}'>
+		</span>	</a>
+		
 		<div style="height:220px">
 		<h4><span style="margin-left:25px"> {{news.abstract}}</span></h4>
 		</div>

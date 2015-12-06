@@ -7,7 +7,11 @@
 		
 
 		<a href="{{p.link}}" target="_blank"><img src="{{p.images.standard_resolution.url}}"></a>
-		<h4 style="text-align: center"><strong>"{{p.caption.text}}"</strong></h4>
+		<h4 style="text-align: center">
+		<span ng-if="p.caption!== null ">
+		<strong >"{{p.caption.text}}"</strong>
+		</span>
+		</h4>
 		<h4 style="text-align: center">&#9758 Follow @: <a href="https://www.instagram.com/{{p.user.username}}/" target="_blank">{{p.user.username}}</a></h4><br>
 
 	</div>
