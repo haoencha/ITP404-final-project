@@ -3,12 +3,12 @@ angular
   .config(function($routeProvider) {
     $routeProvider
       .when('/', {
-        templateUrl: '/templates/index.html',
+        templateUrl: 'templates/index.html',
         controller: 'HomeController',
         controllerAs: 'vm'
       })
       .when('/maps', {
-        templateUrl: '/templates/maps.html',
+        templateUrl: 'templates/maps.html',
         controller: 'MapsController',
         controllerAs: 'vm',
         resolve: {
@@ -16,7 +16,7 @@ angular
         }
       })
       .when('/news', {
-        templateUrl: '/templates/news.html',
+        templateUrl: 'templates/news.html',
         controller: 'NewsController',
         controllerAs: 'vm',
         resolve: {
