@@ -1,0 +1,19 @@
+<div class="marginTop">
+<h1 style="text-align: center; font-size:50px">Popular News</h1><br>
+
+<div class="jumbotron" style=" width: 80%; margin: 0 auto; padding-left:10px; padding-right:10px" >
+	
+	<div ng-repeat= "news in vm.news" style=" width: 80%; margin: 0 auto; height:480px; border-style: solid; border-width: 5px; padding:15px">
+		
+		<h4 style="text-align: center"><strong>"{{news.title}}"</strong></h5><br>
+
+		<a href="{{news.url}}" style="float:left; margin-right:20px" target="_blank"><img src='{{news.multimedia[3].url}}'></a>
+		<div style="height:220px">
+		<h4><span style="margin-left:25px"> {{news.abstract}}</span></h4>
+		</div>
+		<h5 style="text-align: center"> <i>{{news.source}}</i></h5>
+		<h5 style="text-align: center"> {{news.byline}}
+	</div>
+
+</div>
+</div>

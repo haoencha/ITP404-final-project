@@ -1,0 +1,16 @@
+<div class="marginTop">
+<h1 style="text-align: center; font-size:50px">Popular on Instagram <img src="https://pbs.twimg.com/profile_images/1550954462/instagramIcon.png" height="100px" style="margin-left:20px"></h1><br>
+
+<div class="jumbotron" style=" width: 80%; margin: 0 auto; padding-left:10px; padding-right:10px">
+	
+	<div ng-repeat= "p in pics" style=" width: 80%; margin: 0 auto; margin-bottom: 50px">
+		
+
+		<a href="{{p.link}}" target="_blank"><img src="{{p.images.standard_resolution.url}}"></a>
+		<h4 style="text-align: center"><strong>"{{p.caption.text}}"</strong></h4>
+		<h4 style="text-align: center">&#9758 Follow @: <a href="https://www.instagram.com/{{p.user.username}}/" target="_blank">{{p.user.username}}</a></h4><br>
+
+	</div>
+
+</div>
+</div>

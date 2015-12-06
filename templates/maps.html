@@ -1,0 +1,34 @@
+<div class="marginTop">
+<div class="mapTabs">
+<form class="navbar-form navbar-left" ng-submit="vm.search()" ng-if="vm.searchboxCity">
+        <div class="form-group" >
+          <input type="text" class="form-control" placeholder="Search a city/country" ng-model="vm.locationSearch">
+        </div>
+        <button type="submit" class="btn btn-default" >Search</button> 
+
+</form>
+<button type="submit" class="btn btn-default" id="mapSearchTab" ng-click="vm.searchCity= false; vm.searchboxCity= true; vm.searchboxPhoto= false; vm.searchPhoto=true" ng-if="vm.searchCity">Search a City/Country</button><br>
+<form class="navbar-form navbar-left" ng-if="vm.searchboxPhoto" ng-submit="vm.search()">
+  <div class="form-group" >
+          <input type="text" class="form-control" placeholder="Search photos in a city" ng-model="vm.locationSearch">
+        </div>
+        <button type="submit" class="btn btn-default" >Search</button> 
+</form>
+
+<button type="submit" class="btn btn-default" id="mapSearchTab" ng-click="vm.searchboxPhoto= true; vm.searchPhoto=false; vm.searchCity= true; vm.searchboxCity= false" ng-if="vm.searchPhoto">Search Photos in a City/Country</button> 
+</div>
+
+<div class="alert alert-dismissible alert-info" style="text-align: center; font-size:20px" ng-if="vm.loading">
+  <strong >Loading...!!!</strong> 
+</div> 
+<!-- <div ng-repeat="locations in vm.locations">
+  {{locations.geometry.location.lat}}
+  {{locations.geometry.location.lat}}
+
+</div> -->
+<div class="jumbotron" id="map-canvas">
+
+</div>
+</div>
+
+
