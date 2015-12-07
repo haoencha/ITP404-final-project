@@ -1,5 +1,5 @@
 angular
-  .module('instaSearch', ["ngRoute"])
+  .module('instaSearch')
   .factory('Maps', function($http) {
     return {
       search: function(location) {
